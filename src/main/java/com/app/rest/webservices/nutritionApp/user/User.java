@@ -1,7 +1,20 @@
 package com.app.rest.webservices.nutritionApp.user;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity(name = "user_details")
+//user_details (id,age,gender,height,name,weekly_training_frequency,weight)
 public class User {
 
+    protected User(){
+
+    }
+
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
     private String gender;
